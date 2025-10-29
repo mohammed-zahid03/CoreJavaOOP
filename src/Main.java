@@ -88,3 +88,5 @@ class Cat extends Animal {
         return "Cat{name='" + name + "', age=" + age + ", color='" + color + "'}";
     }
 }
+//Updated: small edit for Git test
+
