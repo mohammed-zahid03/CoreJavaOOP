@@ -33,6 +33,7 @@ public class Main {
         // Upcasting example
         Animal upcastedDog = dog;
         upcastedDog.makeSound(); // still uses Dog's method
+        System.out.println("\n=== Inheritance Structure Demonstration Completed ===");
     }
 }
 
