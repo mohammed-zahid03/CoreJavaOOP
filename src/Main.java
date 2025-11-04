@@ -33,6 +33,17 @@ public class Main {
         // Upcasting example
         Animal upcastedDog = dog;
         upcastedDog.makeSound(); // still uses Dog's method
+        
+        // Interface + Polymorphism Example
+        System.out.println("\n=== Interface Implementation Example ===");
+
+        Bird parrot = new Bird("Rio", 2, "Macaw");
+        System.out.println(parrot);
+        parrot.makeSound();
+
+        // Using interface reference
+        SoundBehavior sb = parrot;
+        sb.makeSound();
         System.out.println("\n=== Inheritance Structure Demonstration Completed ===");
     }
 }
@@ -56,8 +67,14 @@ class Animal {
     }
 }
 
+//Interface for sound behavior
+interface SoundBehavior {
+ void makeSound();
+}
+
 // Child class 1
-class Dog extends Animal {
+class Dog extends Animal implements SoundBehavior {
+
     String breed;
 
     Dog(String name, int age, String breed) {
@@ -75,7 +92,8 @@ class Dog extends Animal {
 }
 
 // Child class 2
-class Cat extends Animal {
+class Cat extends Animal implements SoundBehavior {
+
     String color;
 
     Cat(String name, int age, String color) {
@@ -91,5 +109,23 @@ class Cat extends Animal {
         return "Cat{name='" + name + "', age=" + age + ", color='" + color + "'}";
     }
 }
+//New Advanced class implementing Interface
+class Bird extends Animal implements SoundBehavior {
+ String species;
+
+ Bird(String name, int age, String species) {
+     super(name, age);
+     this.species = species;
+ }
+
+ public void makeSound() {
+     System.out.println(name + " chirps melodiously!");
+ }
+
+ public String toString() {
+     return "Bird{name='" + name + "', age=" + age + ", species='" + species + "'}";
+ }
+}
+
 //Updated: small edit for Git test
 
