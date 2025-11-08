@@ -45,6 +45,12 @@ public class Main {
         SoundBehavior sb = parrot;
         sb.makeSound();
         System.out.println("\n=== Inheritance Structure Demonstration Completed ===");
+        
+     // NEW LINES FOR UPDATE (for Git test)
+        System.out.println("\n--- Summary ---");
+        System.out.println("Demonstrated inheritance, polymorphism, and interface implementation.");
+        System.out.println("Code execution completed successfully!");
+        System.out.println("Update done for Git testing.");
     }
 }
 
